@@ -71,3 +71,6 @@ length of the straight path of the train.
 
 - [ ] Add options for different instruments
 - [ ] Allow user to control train speed
+
+
+git filter-branch -f --env-filter "GIT_AUTHOR_NAME='cameron mcinnes'; GIT_AUTHOR_EMAIL='crm2193@columbia.edu'; GIT_COMMITTER_NAME='cameron mcinnes'; GIT_COMMITTER_EMAIL='crm2193@columbia.edu';" HEAD

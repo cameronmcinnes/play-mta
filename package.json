@@ -1,0 +1,29 @@
+{
+  "name": "js_project",
+  "version": "1.0.0",
+  "description": "A musical mta map",
+  "main": "index.js",
+  "dependencies": {
+    "webpack": "^4.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "teset"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cameronmcinnes/music_map.git"
+  },
+  "keywords": [
+    "JavaScript"
+  ],
+  "scripts": {
+    "webpack": "webpack --watch"
+  },
+  "author": "cameron mcinnes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cameronmcinnes/music_map/issues"
+  },
+  "homepage": "https://github.com/cameronmcinnes/music_map#readme"
+}
