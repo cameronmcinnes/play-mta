@@ -6,9 +6,11 @@
   "dependencies": {
     "webpack": "^4.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack-cli": "^2.0.12"
+  },
   "scripts": {
-    "test": "teset"
+    "webpack": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -17,9 +19,6 @@
   "keywords": [
     "JavaScript"
   ],
-  "scripts": {
-    "webpack": "webpack --watch"
-  },
   "author": "cameron mcinnes",
   "license": "ISC",
   "bugs": {
