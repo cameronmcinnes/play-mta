@@ -81,3 +81,8 @@ graphics coords
 
 
 0,10     10,10
+
+### ideas
+play percussive sound at every station ?
+--> different sound for each line ?? cymbal, cowbell, clap, kickdrum?
+http://nycpulse.herokuapp.com/api
