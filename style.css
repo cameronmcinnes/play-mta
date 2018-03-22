@@ -1,3 +1,23 @@
+#canvas {
+  display: block;
+  margin: auto;
+  transform: rotate(-8deg);
+}
+
+#bg-map {
+  /* background-image: url('https://i.imgur.com/e77FuLB.png'); */
+  height: 100%;
+  width: 100%;
+  background-position: 41% 21%;
+  background-repeat: no-repeat;
+  background-size: 2000px 2000px;
+  position: absolute;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
 ul {
   list-style: none;
   display: flex;
