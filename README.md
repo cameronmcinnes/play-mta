@@ -82,6 +82,17 @@ graphics coords
 
 0,10     10,10
 
+
+need 17 sounds for 17 lines
+
+## Sounds
+pentatonic
+
+c d e g a
+c d e g a
+c d e g a
+c d
+
 ### ideas
 play percussive sound at every station ?
 --> different sound for each line ?? cymbal, cowbell, clap, kickdrum?
