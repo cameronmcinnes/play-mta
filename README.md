@@ -65,7 +65,7 @@ length of the straight path of the train.
 **Day 4**:
 - Add clock with subway departures
 - Add simple pluck animation
-- Style the frontend, making it polished and professional.  Goals for the day:
+- Style the frontend, making it polished and professional.
 
 ### Bonus features
 
@@ -86,3 +86,19 @@ graphics coords
 play percussive sound at every station ?
 --> different sound for each line ?? cymbal, cowbell, clap, kickdrum?
 http://nycpulse.herokuapp.com/api
+
+
+resize screen w/ #clientHeight, also see custom resize function
+https://webglfundamentals.org/webgl/lessons/webgl-anti-patterns.html
+
+# Production ReadMe notes
+used data cleaning script to pull lat lng and stop id from mta data
+`line.match(/,,(?<lat>\d{2}.\d*),(?<lng>.*),,,\d,(?<stn_id>.{3})/)`
+
+`101,,Van Cortlandt Park - 242 St,,40.889248,-73.898583,,,1,
+101N,,Van Cortlandt Park - 242 St,,40.889248,-73.898583,,,0,101
+101S,,Van Cortlandt Park - 242 St,,40.889248,-73.898583,,,0,101
+103,,238 St,,40.884667,-73.90087,,,1,
+103N,,238 St,,40.884667,-73.90087,,,0,103`
+
+wrote to json file

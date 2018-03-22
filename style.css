@@ -15,3 +15,7 @@ a:hover {
   transition: all .1s ease-in;
   color: #4dadf7;
 }
+
+li {
+  margin: 50px;
+}
