@@ -73,4 +73,11 @@ length of the straight path of the train.
 - [ ] Allow user to control train speed
 
 
-git filter-branch -f --env-filter "GIT_AUTHOR_NAME='cameron mcinnes'; GIT_AUTHOR_EMAIL='crm2193@columbia.edu'; GIT_COMMITTER_NAME='cameron mcinnes'; GIT_COMMITTER_EMAIL='crm2193@columbia.edu';" HEAD
+## Notes
+
+graphics coords
+
+0,0      10,0
+
+
+0,10     10,10
