@@ -1,3 +1,26 @@
+ul {
+  list-style: none;
+}
+
+button {
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: #282828;
 }
@@ -24,23 +47,36 @@ body {
 }
 
 ul {
-  list-style: none;
   display: flex;
 }
 
-a {
-  text-decoration: none;
+a, button {
   font-size: 30px;
   color: #777;
   font-family: 'Open Sans', sans-serif;
   /* font-weight: 800; */
 }
 
-a:hover {
+a:hover, button:hover {
   transition: all .1s ease-in;
   color: #4dadf7;
 }
 
 li {
   margin: 50px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+.train-controls {
+  display: flex;
 }
