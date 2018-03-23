@@ -75,6 +75,8 @@ length of the straight path of the train.
 
 ## Notes
 
+https://codepen.io/rachsmith/post/animation-tip-lerp
+
 graphics coords
 
 0,0      10,0
@@ -84,6 +86,14 @@ graphics coords
 
 
 need 17 sounds for 17 lines
+
+investigate this data feed?? different cleaning methods ??
+https://data.cityofnewyork.us/Transportation/Subway-Stations/arq3-7z49/data
+
+
+You could use this: How to make clickable points in html5 canvas?
+
+and while the mouse is in that area, you can set: $('#canvasID').css('cursor','pointer') and $('#canvasID').css('cursor','auto') when it's not over it.
 
 ## Sounds
 pentatonic

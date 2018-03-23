@@ -1,7 +1,8 @@
 #canvas {
   display: block;
   margin: auto;
-  transform: rotate(-8deg);
+  /* for hover turn off */
+  /* transform: rotate(-8deg); */
 }
 
 #bg-map {
