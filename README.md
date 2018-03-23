@@ -95,6 +95,8 @@ You could use this: How to make clickable points in html5 canvas?
 
 and while the mouse is in that area, you can set: $('#canvasID').css('cursor','pointer') and $('#canvasID').css('cursor','auto') when it's not over it.
 
+TODO TRAINS delete themselves, should they also add themselves?? 
+
 ## Sounds
 pentatonic
 
