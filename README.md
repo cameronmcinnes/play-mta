@@ -112,6 +112,97 @@ http://nycpulse.herokuapp.com/api
 resize screen w/ #clientHeight, also see custom resize function
 https://webglfundamentals.org/webgl/lessons/webgl-anti-patterns.html
 
+# TODO
+hover train cursor pointer
+run trains in both directions
+add map
+clean up subway data to run actual lines
+sync to live schedule?
+feed in accurate schedule?
+scale canvas to client screen
+style
+
+# Backwards train
+## CURRENTLY
+### TO START TRAIN
+
+* 1) MAP
+  * a) Map constructor calls Map#setupMap() which creates path objects for each set of subway line vertices
+  * b) Map calls Map#startPaths() in constructor which calls Path#startPath() for each path
+
+* 2) Path
+  * a) Path#startPath()
+  * b) which calls Path#addTrain() instantiates new train
+  * c) Pushes new train to map's trains array
+  * d) Calls Segment#receiveTrain() on its first segment
+
+* 3) Segment
+  * a) Segment#receiveTrain(train) sets train ivar to train argument
+  * b) segment sets itself to be drawn (this.shouldBeDrawn = true)
+  * c) segment sets its terminus to the position of the train
+
+* 4) Train
+  * a) train moves every time delta
+  * b) updates the position of its segment by calling this.currSegment.trainAdvanced();
+  * c) currentSegment sets its position to the updated position of the train
+
+### TO END TRAIN
+
+* 1)  Train
+  * a) in Train#move() train checks if there is a nextSegment
+  * b) if not it sets this.isMoving to false and returns null
+
+* 2)  PathSegment
+  * a) in PathSegment#releaseTrain segment checks if its parent path has any more segments
+  * b) if not segment calls Path#restartPath();
+
+* 3) Path
+  * a) in Path#restartPath() path sets each of its segments to hidden
+  * b) path calls Path#addTrain
+---
+
+## TO IMPLEMENT BI DIRECTIONAL TRAINS
+
+### TO START TRAIN
+
+* 1) Map
+  * a) Map constructor calls Map#setupMap() which creates path objects for each set of subway line vertices
+  * b) Map calls Map#startPaths() in constructor which calls Path#startPath() for each path
+
+* 2) Path
+  * a) Path#startPath()
+  * **b) which calls Path#addTrain(DIR) (-1 or +1) instantiates new train W/ DIR**
+  * c) Pushes new train to map's trains array
+  * **d) runs conditional w/ direction, if + origin Seg is first, else last**
+  * e) Calls Segment#receiveTrain(train) on its origin segment
+
+* 3) PathSegment
+  * a) Segment#receiveTrain(train) sets train ivar to train argument
+  * b) segment sets itself to be drawn (this.shouldBeDrawn = true)
+  * **c) segment needs to set train origin depending on DIR**
+  * d) segment sets its terminus to the position of the train
+
+* 4) Train
+  * a) train moves every time delta
+  * b) updates the position of its segment by calling this.currSegment.trainAdvanced();
+  * c) currentSegment sets its position to the updated position of the train
+
+### TO END TRAIN
+
+* 1) Train
+  * **a) to determine next segment need conditional based on DIR**
+  * b) in Train#move() train checks if there is a nextSegment
+  * c) if not it sets this.isMoving to false and returns null
+
+* 2) PathSegment
+  * a) in PathSegment#releaseTrain segment checks if its parent path has any more segments
+  * b) if not segment calls Path#restartPath();
+
+* 3) Path
+  * a) in Path#restartPath() path sets each of its segments to hidden
+  * b) path calls Path#addTrain
+
+
 # Production ReadMe notes
 used data cleaning script to pull lat lng and stop id from mta data
 `line.match(/,,(?<lat>\d{2}.\d*),(?<lng>.*),,,\d,(?<stn_id>.{3})/)`
