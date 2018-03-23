@@ -1,3 +1,7 @@
+body {
+  background-color: #282828;
+}
+
 #canvas {
   display: block;
   margin: auto;

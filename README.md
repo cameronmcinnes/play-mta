@@ -113,14 +113,14 @@ resize screen w/ #clientHeight, also see custom resize function
 https://webglfundamentals.org/webgl/lessons/webgl-anti-patterns.html
 
 # TODO
-hover train cursor pointer
-run trains in both directions
-add map
-clean up subway data to run actual lines
-sync to live schedule?
-feed in accurate schedule?
-scale canvas to client screen
-style
+- [ ] hover train cursor pointer
+- [ ] run trains in both directions
+- [ ] add map
+- [ ] clean up subway data to run actual lines
+- [ ] sync to live schedule?
+- [ ] feed in accurate schedule?
+- [ ] scale canvas to client screen
+- [ ] style
 
 # Backwards train
 ## CURRENTLY
