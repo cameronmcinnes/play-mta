@@ -1,48 +1,58 @@
 <html>
-  <head>
-    <title>Musical MTA Map</title>
-    <script type="application/javascript" src="lib/bundle.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
-  </head>
+<head>
+  <title>Musical MTA Map</title>
+  <script type="application/javascript" src="lib/bundle.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 
-  <body>
-    <div id='bg-map'></div>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+</head>
 
-    <nav class='controls'>
-      <button class="mute">
+<body>
+  <main>
+
+  <nav class='controls'>
+    <button class="mute">
         <i class="fas fa-volume-off"></i>
       </button>
 
-      <ul class='train-controls'>
-        <button data-dir='1'>
+    <button class='reset'>
+        reset map
+      </button>
+
+    <ul class='train-controls'>
+      <button data-dir='1'>
           dispatch trains forward
         </button>
 
-        <button data-dir='-1'>
+      <button data-dir='-1'>
           dispatch trains backward
         </button>
-      </ul>
-    </nav>
+    </ul>
+  </nav>
 
-    <main>
-      <canvas id="canvas"></canvas>
-      <ul>
-        <li>
-          <a href="https://github.com/cameronmcinnes">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
+  <div class="canvas-container">
+    <canvas id="canvas"></canvas>
+  </div>
 
-        <li>
-          <a href="https://www.linkedin.com/in/cameron-mcinnes-008bb625/">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </li>
-        <li><a href="#">more projects</a></li>
-      </ul>
-    </main>
-  </body>
+  <ul class='portfolio-links'>
+    <li><a href="#">Cameron McInnes</a></li>
+    <li>
+      <a href="https://github.com/cameronmcinnes">
+          <i class="fab fa-github"></i>
+        </a>
+    </li>
+
+    <li>
+      <a href="https://www.linkedin.com/in/cameron-mcinnes-008bb625/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+    </li>
+    <li><a href="#">more projects</a></li>
+  </ul>
+</main>
+
+</body>
+
 </html>

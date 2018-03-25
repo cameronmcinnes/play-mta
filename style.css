@@ -17,6 +17,10 @@ button:focus {
   outline: none;
 }
 
+main {
+  display: flex;
+}
+
 a {
   text-decoration: none;
 }
@@ -25,35 +29,27 @@ body {
   background-color: #282828;
 }
 
-#canvas {
-  display: block;
+.canvas-container {
+  /* position: relative; */
+  width: 100vh;
+  height: 100vh;
+  /* z-index: -1; */
   margin: auto;
-  /* for hover turn off */
+}
+
+#canvas {
+  /* display: block;
+  margin: auto;
+  /* height: 100%; */
+  /* width: 100%; */
   /* transform: rotate(-8deg); */
 }
 
-#bg-map {
-  /* background-image: url('https://i.imgur.com/e77FuLB.png'); */
-  height: 100%;
-  width: 100%;
-  background-position: 41% 21%;
-  background-repeat: no-repeat;
-  background-size: 2000px 2000px;
-  position: absolute;
-  overflow: hidden;
-  top: 0px;
-  left: 0px;
-  z-index: -1;
-}
-
-ul {
-  display: flex;
-}
-
 a, button {
-  font-size: 30px;
+  font-size: 20px;
   color: #777;
   font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
   /* font-weight: 800; */
 }
 
@@ -63,7 +59,7 @@ a:hover, button:hover {
 }
 
 li {
-  margin: 50px;
+  margin: 20px;
 }
 
 button {
@@ -74,9 +70,24 @@ button {
 
 .controls {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .train-controls {
   display: flex;
+  flex-direction: column;
+}
+
+.portfolio-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.links-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
