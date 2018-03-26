@@ -12,45 +12,59 @@
 <body>
   <main>
 
-  <nav class='controls'>
-    <button class="mute">
-        <i class="fas fa-volume-off"></i>
-      </button>
+  <nav class='left-side'>
 
-    <button class='reset'>
-        reset map
-      </button>
+    <ul class='portfolio-links'>
+      <li><a href="#">Cameron McInnes</a></li>
+      <li>
+        <a href="https://github.com/cameronmcinnes">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
 
-    <ul class='train-controls'>
-      <button data-dir='1'>
-          dispatch trains forward
-        </button>
-
-      <button data-dir='-1'>
-          dispatch trains backward
-        </button>
+      <li>
+        <a href="https://www.linkedin.com/in/cameron-mcinnes-008bb625/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
     </ul>
+
+    <img
+      class='bullet-hidden'
+      alt='subway-bullet' />
   </nav>
 
   <div class="canvas-container">
     <canvas id="canvas"></canvas>
   </div>
 
-  <ul class='portfolio-links'>
-    <li><a href="#">Cameron McInnes</a></li>
-    <li>
-      <a href="https://github.com/cameronmcinnes">
-          <i class="fab fa-github"></i>
-        </a>
-    </li>
+  <nav class='controls'>
 
-    <li>
-      <a href="https://www.linkedin.com/in/cameron-mcinnes-008bb625/">
-          <i class="fab fa-linkedin"></i>
-        </a>
-    </li>
-    <li><a href="#">more projects</a></li>
-  </ul>
+    <ul>
+      <button class="mute">
+          <i class="fas fa-volume-up"></i>
+        </button>
+
+      <button class='reset'>
+        reset map
+      </button>
+    </ul>
+
+    <ul class='train-controls'>
+      <button data-dir='1'>
+          dispatch trains
+      </button>
+
+      <button data-dir='-1'>
+          dispatch uptown
+      </button>
+    </ul>
+  </nav>
+
+  <div class="background-img-container">
+    <img class="background-image" src='./background_map/bg_map.svg'/>
+  </div>
+
 </main>
 
 </body>

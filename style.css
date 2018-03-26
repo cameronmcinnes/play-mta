@@ -29,6 +29,27 @@ body {
   background-color: #282828;
 }
 
+.background-img-container {
+  /* height: 100%; */
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background-image {
+  display: none;
+  position: absolute;
+  top: -22vh;
+  left: -50.4vw;
+  height: 160%;
+  /* width: auto; */
+  z-index: -1;
+  transform: rotate(-8deg);
+}
+
 .canvas-container {
   /* position: relative; */
   width: 100vh;
@@ -38,11 +59,11 @@ body {
 }
 
 #canvas {
-  /* display: block;
-  margin: auto;
+  /* display: block; */
+  /* margin: auto; */
   /* height: 100%; */
   /* width: 100%; */
-  /* transform: rotate(-8deg); */
+  transform: rotate(-8deg);
 }
 
 a, button {
@@ -71,7 +92,7 @@ button {
 .controls {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .train-controls {
@@ -82,7 +103,7 @@ button {
 .portfolio-links {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .links-container {
@@ -90,4 +111,37 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.controls {
+  text-align: right;
+  margin-right: 50px;
+  margin-top: 20px;
+  width: 250px;
+}
+
+.controls button {
+  text-align: right;
+}
+
+@keyframes slidein {
+  from { transform: translate(-120px); }
+  to   { transform: translate(0px); }
+}
+
+@keyframes fadeout {
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.bullet-hidden {
+  display: none;
+}
+
+.subway-bullet {
+  display: block;
+  height: 100px;
+  width: 100px;
+  margin: 50px;
+  animation: .3s slidein, 1s fadeout linear 1 forwards;
 }
