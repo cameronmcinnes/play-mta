@@ -1,4 +1,4 @@
-## Musical MTA
+# Play MTA
 
 ### Background
 

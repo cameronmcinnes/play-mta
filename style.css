@@ -52,7 +52,6 @@ body {
 
 .canvas-container {
   /* position: relative; */
-  width: 100vh;
   height: 100vh;
   /* z-index: -1; */
   margin: auto;
@@ -63,7 +62,7 @@ body {
   /* margin: auto; */
   /* height: 100%; */
   /* width: 100%; */
-  transform: rotate(-8deg);
+  /* transform: rotate(-8deg); */
 }
 
 p {
