@@ -121,10 +121,18 @@ https://webglfundamentals.org/webgl/lessons/webgl-anti-patterns.html
 - [ ] run trains in both directions
 - [ ] add map
 - [ ] clean up subway data to run actual lines
+- [ ] add express and local trains
 - [ ] sync to live schedule?
 - [ ] feed in accurate schedule?
 - [ ] scale canvas to client screen
 - [ ] style
+
+# BUGS
+- [ ] backward and forward train colliding probs
+- [ ] fast play and move when come back to page
+- [ ] fix background map image ?? needed?
+- [ ] conditional check on keypress
+
 
 # Backwards train
 ## CURRENTLY

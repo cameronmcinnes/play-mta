@@ -39,7 +39,7 @@
     </ul>
 
     <img
-      class='bullet-hidden'
+      class='bullet-hidden left-bullet'
       alt='subway-bullet' />
   </nav>
 
@@ -47,27 +47,39 @@
     <canvas id="canvas"></canvas>
   </div>
 
-  <nav class='controls'>
+  <nav class='right-nav'>
 
-    <button class="mute">
-        <i class="fas fa-volume-up"></i>
-    </button>
+    <nav class='controls'>
 
-    <button class='reset'>
-      reset map
-    </button>
-
-    <ul class='train-controls'>
-      <button data-dir='1'>
-          dispatch trains
+      <button class="mute">
+          <i class="mute fas fa-volume-up"></i>
       </button>
 
-      <button data-dir='-1'>
-          dispatch uptown
+      <button class='reset'>
+        reset map
       </button>
-    </ul>
+
+      <button class='deselect'>
+        deselect all
+      </button>
+
+      <ul class='train-controls'>
+        <button class='train-controls' data-dir='1'>
+            dispatch all downtown
+        </button>
+
+        <button class='train-controls' data-dir='-1'>
+            dispatch all uptown
+        </button>
+      </ul>
+
+
+    </nav>
+    <img
+    class='bullet-hidden right-bullet'
+    alt='subway-bullet' />
+
   </nav>
-
   <div class="background-img-container">
     <img class="background-image" src='./background_map/bg_map.svg'/>
   </div>

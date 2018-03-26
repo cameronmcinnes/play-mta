@@ -106,10 +106,14 @@ button {
   flex-direction: column;
 }
 
-.left-nav {
+.left-nav, .right-nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.right-nav {
+  align-items: flex-end;
 }
 
 .portfolio-links {
@@ -191,8 +195,13 @@ button {
   text-align: right;
 }
 
-@keyframes slidein {
+@keyframes slideinleft {
   from { transform: translate(-120px); }
+  to   { transform: translate(0px); }
+}
+
+@keyframes slideinright {
+  from { transform: translate(120px); }
   to   { transform: translate(0px); }
 }
 
@@ -210,5 +219,21 @@ button {
   height: 100px;
   width: 100px;
   margin: 50px;
-  animation: .3s slidein, 1s fadeout linear 1 forwards;
+  animation: .3s slideinleft, 1s fadeout linear 1 forwards;
+}
+
+.subway-bullet.left-bullet {
+  /* display: block;
+  height: 100px;
+  width: 100px;
+  margin: 50px; */
+  animation: .3s slideinleft, 1s fadeout linear 1 forwards;
+}
+
+.subway-bullet.right-bullet {
+  /* display: block;
+  height: 100px;
+  width: 100px;
+  margin: 50px; */
+  animation: .3s slideinright, 1s fadeout linear 1 forwards;
 }
