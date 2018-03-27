@@ -4,6 +4,7 @@
   "description": "A musical mta map",
   "main": "index.js",
   "dependencies": {
+    "viewport-mercator-project": "^5.0.1",
     "webpack": "^4.2.0"
   },
   "devDependencies": {
