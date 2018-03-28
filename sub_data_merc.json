@@ -1014,8 +1014,8 @@
       ["Tompkinsville", [-74.074835, 40.636949]],
       ["St George", [-74.073643, 40.643748]]
     ],
-    "lineName": "STATEN",
-    "duration": 5,
+    "lineName": "I",
+    "duration": 40,
     "color": "#808183"
   }
 }
