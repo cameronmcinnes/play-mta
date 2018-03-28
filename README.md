@@ -127,12 +127,20 @@ https://webglfundamentals.org/webgl/lessons/webgl-anti-patterns.html
 - [ ] scale canvas to client screen
 - [ ] style
 
-# BUGS
-- [ ] backward and forward train colliding probs
-- [ ] fast play and move when come back to page
-- [ ] fix background map image ?? needed?
-- [ ] conditional check on keypress
+# TODO
+- [ ] fix zoom
+- [ ] limit pan
+- [ ] resize canvas to screen, dont scroll screen
+- [ ] put controls in control tab dropdown
+- [ ] fix svg bullet in live (webpack)
 
+
+# BUGS
+- [ ] fast play and move when come back to page
+## fixed
+backward and forward train colliding probs
+conditional check on keypress
+fix background map image ?? needed?
 
 # Backwards train
 ## CURRENTLY

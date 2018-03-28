@@ -14,43 +14,7 @@
 
   <nav class='left-nav'>
 
-    <ul class='portfolio-links'>
-      <li><a href="#">Cameron McInnes</a></li>
-      <li>
-        <a href="https://github.com/cameronmcinnes">
-          <i class="fab fa-github"></i>
-        </a>
-      </li>
-
-      <li>
-        <a href="https://www.linkedin.com/in/cameron-mcinnes-008bb625/">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </li>
-
-      <li>
-        <a>
-          <i class="fas fa-question"></i>
-        </a>
-      </li>
-      <p class='about'>
-        This is a project, its very cool
-      </p>
-    </ul>
-
-    <img
-      class='bullet-hidden left-bullet'
-      alt='subway-bullet' />
-  </nav>
-
-  <div class="canvas-container">
-    <canvas id="canvas"></canvas>
-  </div>
-
-  <nav class='right-nav'>
-
     <nav class='controls'>
-
       <button class="mute">
           <i class="mute fas fa-volume-up"></i>
       </button>
@@ -67,25 +31,57 @@
         center map
       </button>
 
-      <ul class='train-controls'>
-        <button class='train-controls' data-dir='1'>
-            dispatch all downtown
-        </button>
+      <button class='train-controls' data-dir='1'>
+          dispatch downtown
+      </button>
 
-        <button class='train-controls' data-dir='-1'>
-            dispatch all uptown
-        </button>
-      </ul>
+      <button class='train-controls' data-dir='-1'>
+          dispatch uptown
+      </button>
 
+      <button class='about-trigger'>
+        <i class="fas fa-question"></i>
+      </button>
 
+      <img
+        class='bullet-hidden left-bullet'
+        alt='subway-bullet' />
+
+      <p class='about'>
+        This is a project, its very cool
+      </p>
     </nav>
+  </nav>
+
+  <nav class='right-nav'>
     <img
     class='bullet-hidden right-bullet'
     alt='subway-bullet' />
 
+    <ul class='portfolio-links'>
+      <li>
+        <a href="https://github.com/cameronmcinnes">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.linkedin.com/in/cameron-mcinnes-008bb625/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+
+      <li><a href="#">Cameron McInnes</a></li>
+
+    </ul>
   </nav>
+
+  <div class="canvas-container">
+    <canvas id="canvas"></canvas>
+  </div>
+
   <div class="background-img-container">
-    <img class="background-image" src='./background_map/bg_map.svg'/>
+    <!-- <img class="background-image" src='./background_map/bg_map.svg'/> -->
   </div>
 
 </main>
