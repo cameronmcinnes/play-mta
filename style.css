@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 ul {
   list-style: none;
 }
@@ -36,10 +40,10 @@ body {
   height: 100vh;
   width: 100vw;
   /* z-index: -1; */
-  margin: auto;
 }
 
 #canvas {
+  overflow: hidden;
   /* position: absolute; */
 }
 
