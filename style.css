@@ -93,7 +93,6 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* width: 300; */
 }
 
 .right-nav {
@@ -174,14 +173,20 @@ button {
   justify-content: space-between;
 }
 
+.controls.shown {
+  display: flex;
+  background-color: black;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
 .controls {
-  margin-right: 50px;
-  margin-top: 20px;
-  width: 250px;
+  display: none;
 }
 
 .controls button {
   text-align: left;
+  font-size: 1em;
 }
 
 @keyframes slideinleft {
@@ -199,6 +204,18 @@ button {
   100% { opacity: 0; }
 }
 
+.controls-toggle {
+  text-align: left;
+}
+
+.controls-toggle:before {
+  content: 'show '
+}
+
+.controls-toggle.shown:before {
+  content: 'hide '
+}
+
 .bullet-hidden {
   display: none;
 }
@@ -212,17 +229,34 @@ button {
 }
 
 .subway-bullet.left-bullet {
-  /* display: block;
-  height: 100px;
-  width: 100px;
-  margin: 50px; */
   animation: .3s slideinleft, 1s fadeout linear 1 forwards;
 }
 
 .subway-bullet.right-bullet {
-  /* display: block;
-  height: 100px;
-  width: 100px;
-  margin: 50px; */
   animation: .3s slideinright, 1s fadeout linear 1 forwards;
+}
+
+.modal-screen {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255, .2)
+}
+
+.modal-screen.hidden {
+  display: none;
+}
+
+.modal-content {
+  width: 50vw;
+  height: 50vh;
+  background: black;
+  border-radius: 10px;
+  color: #fff;
 }

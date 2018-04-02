@@ -13,11 +13,17 @@
   <main>
 
   <nav class='left-nav'>
+    <button class='controls-toggle'>controls</button>
 
     <nav class='controls'>
-      <button class="mute">
-          <i class="mute fas fa-volume-up"></i>
+      <button class='train-controls' data-dir='1'>
+        dispatch downtown
       </button>
+
+      <button class='train-controls' data-dir='-1'>
+        dispatch uptown
+      </button>
+
 
       <button class='reset'>
         clear trains
@@ -31,26 +37,19 @@
         center map
       </button>
 
-      <button class='train-controls' data-dir='1'>
-          dispatch downtown
-      </button>
-
-      <button class='train-controls' data-dir='-1'>
-          dispatch uptown
+      <button class="mute">
+        <i class="mute fas fa-volume-up"></i>
       </button>
 
       <button class='about-trigger'>
         <i class="fas fa-question"></i>
       </button>
 
-      <img
-        class='bullet-hidden left-bullet'
-        alt='subway-bullet' />
-
-      <p class='about'>
-        This is a project, its very cool
-      </p>
     </nav>
+    
+    <img
+    class='bullet-hidden left-bullet'
+    alt='subway-bullet' />
   </nav>
 
   <nav class='right-nav'>
@@ -82,6 +81,13 @@
 
   <div class="background-img-container">
     <!-- <img class="background-image" src='./background_map/bg_map.svg'/> -->
+  </div>
+
+  <div class="modal-screen hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Very sick modal my dude.</p>
+    </div>
   </div>
 
 </main>
