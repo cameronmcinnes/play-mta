@@ -1,4 +1,5 @@
-# Play MTA
+![Logo](https://svgshare.com/i/63u.svg)
+
 
 ## Background
 
