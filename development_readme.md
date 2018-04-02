@@ -120,16 +120,34 @@ resize screen w/ #clientHeight, also see custom resize function
 https://webglfundamentals.org/webgl/lessons/webgl-anti-patterns.html
 
 # TODO
+<<<<<<< HEAD
 - [ ] add express and local trains
 - [ ] sync to live schedule?
 - [ ] feed in accurate schedule?
+=======
+- [ ] hover train cursor pointer
+- [ ] run trains in both directions
+- [ ] add map
+- [ ] clean up subway data to run actual lines
+- [ ] add express and local trains
+- [ ] sync to live schedule?
+- [ ] feed in accurate schedule?
+- [ ] scale canvas to client screen
+>>>>>>> 38d277f8dbb67f7e71186b159da4b723ba037041
 - [ ] style
 
 # TODO
 - [ ] fix zoom
 - [ ] limit pan
+<<<<<<< HEAD
 - [ ] put controls in control tab dropdown
 - [ ] lerp pan
+=======
+- [ ] resize canvas to screen, dont scroll screen
+- [ ] put controls in control tab dropdown
+- [ ] fix svg bullet in live (webpack)
+
+>>>>>>> 38d277f8dbb67f7e71186b159da4b723ba037041
 
 # BUGS
 - [ ] fast play and move when come back to page
