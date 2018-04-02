@@ -135,6 +135,7 @@ button {
   margin: 20px;
 }
 
+
 .about-trigger:hover + .about {
   display: block;
 }
@@ -285,4 +286,8 @@ button {
 
 .modal-content h3 {
   margin-bottom: 40px;
+}
+
+button.about-trigger {
+  font-size: 26px;
 }
