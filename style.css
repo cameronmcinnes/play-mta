@@ -79,12 +79,6 @@ button {
   padding: 10px;
 }
 
-.controls {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
 .train-controls {
   display: flex;
   flex-direction: column;
@@ -175,14 +169,16 @@ button {
   justify-content: space-between;
 }
 
-.controls.shown {
+.controls {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   background-color: black;
   border-radius: 10px;
   margin-right: 10px;
 }
 
-.controls {
+.controls.hidden {
   display: none;
 }
 
@@ -210,11 +206,11 @@ button {
   text-align: left;
 }
 
-.controls-toggle:before {
+.controls-toggle.hidden:before {
   content: 'show '
 }
 
-.controls-toggle.shown:before {
+.controls-toggle:before {
   content: 'hide '
 }
 
