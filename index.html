@@ -12,7 +12,6 @@
 
 <body>
   <main>
-
   <nav class='left-nav'>
     <button class='controls-toggle'>controls</button>
 
@@ -84,21 +83,89 @@
     <!-- <img class="background-image" src='./background_map/bg_map.svg'/> -->
   </div>
 
-  <div class="modal-screen hidden">
+  <div class="modal-screen">
     <div class="modal-content">
       <header>
-       <span class="close">&times;</span>
+        <img class='logo' src="https://svgshare.com/i/63u.svg" alt="logo">
+        <span class="close">&times;</span>
       </header>
+      <div class="modal-body">
 
-      <h2>Play MTA</h2>
-      <h3>Play the subway like an instrument</h3>
-      <p>Type the names of subway line, (1, 2, 3, N, B, L ...) to dispatch trains</p>
-      <p>Each line has its own note</p>
-      <p>Press control while pressing the keys to dispatch trains uptown</p>
-      <p>Click on a running train line to select that line and mute the others, try clicking a few</p>
-      <p>Scroll in and out to zoom, and click and drag to pan</p>
+        <div class="arrow">
+          <i class="fas fa-arrow-left"></i>
+        </div>
+
+        <div class="keyboard">
+          <div class="key-overlay" />
+          <div class="ctrl-key-overlay" />
+        </div>
+      </div>
     </div>
+
+    <div class="arrow">
+      <i class="fas fa-arrow-right"></i>
+    </div>
+
+
+        <!-- <figure class="keyboard">
+        <div class="key-row num">
+          <div class="key"><img src="assets/subway_bullets/1.svg" alt="bullet-1"></div>
+          <div class="key"><img src="assets/subway_bullets/2.svg" alt="bullet-2"></div>
+          <div class="key"><img src="assets/subway_bullets/3.svg" alt="bullet-3"></div>
+          <div class="key"><img src="assets/subway_bullets/4.svg" alt="bullet-4"></div>
+          <div class="key"><img src="assets/subway_bullets/5.svg" alt="bullet-5"></div>
+          <div class="key"><img src="assets/subway_bullets/6.svg" alt="bullet-6"></div>
+          <div class="key"><img src="assets/subway_bullets/7.svg" alt="bullet-7"></div>
+          <div class="key"><p>8</p> </div>
+          <div class="key"><p>9</p> </div>
+          <div class="key"><p>0</p> </div>
+        </div>
+        <div class="key-row ltr-1">
+          <div class="key"><img src="assets/subway_bullets/Q.svg" alt="bullet-Q"></div>
+          <div class="key"><img src="assets/subway_bullets/W.svg" alt="bullet-W"></div>
+          <div class="key"><img src="assets/subway_bullets/E.svg" alt="bullet-E"></div>
+          <div class="key"><img src="assets/subway_bullets/R.svg" alt="bullet-R"></div>
+          <div class="key"><p>T</p> </div>
+          <div class="key"><p>Y</p> </div>
+          <div class="key"><p>U</p> </div>
+          <div class="key"><p>I</p> </div>
+          <div class="key"><p>O</p> </div>
+          <div class="key"><p>P</p> </div>
+        </div>
+        <div class="key-row ltr-2">
+          <div class="key"><img src="assets/subway_bullets/A.svg" alt="bullet-A"></div>
+          <div class="key"><img src="assets/subway_bullets/S.svg" alt="bullet-S"></div>
+          <div class="key"><img src="assets/subway_bullets/D.svg" alt="bullet-D"></div>
+          <div class="key"><img src="assets/subway_bullets/F.svg" alt="bullet-F"></div>
+          <div class="key"><img src="assets/subway_bullets/G.svg" alt="bullet-G"></div>
+          <div class="key"><p>H</p> </div>
+          <div class="key"><img src="assets/subway_bullets/J.svg" alt="bullet-J"></div>
+          <div class="key"><p>K</p> </div>
+          <div class="key"><img src="assets/subway_bullets/L.svg" alt="bullet-L"></div>
+        </div>
+
+        <div class="key-row ltr-2">
+          <div class="key"><img src="assets/subway_bullets/Z.svg" alt="bullet-Z"></div>
+          <div class="key"><p>X</p> </div>
+          <div class="key"><img src="assets/subway_bullets/C.svg" alt="bullet-C"></div>
+          <div class="key"><p>V</p> </div>
+          <div class="key"><img src="assets/subway_bullets/B.svg" alt="bullet-B"></div>
+          <div class="key"><img src="assets/subway_bullets/N.svg" alt="bullet-N"></div>
+          <div class="key"><img src="assets/subway_bullets/M.svg" alt="bullet-M"></div>
+        </div>
+
+        <div class="key-row space"->
+          <div class="key key-size-6 key-small-type">ctrl</div>
+          <div class="key key-size-7"></div>
+        </div>
+
+        </figure> -->
+
+      </div>
+      <p>Press a key to dispatch a downtown train on the corresponding line</p>
+
   </div>
+  <div class="modal-caption">(press space to close)</div>
 
 </main>
 

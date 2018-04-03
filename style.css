@@ -10,11 +10,9 @@ ul {
 
 button {
   line-height: normal;
-
   /* Corrects font smoothing for webkit */
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
-
   /* Corrects inability to style clickable `input` types in iOS */
   -webkit-appearance: none;
 }
@@ -126,8 +124,7 @@ button {
   color: #4dadf7;
 }
 
-.portfolio-links li:last-child {
-}
+.portfolio-links li:last-child {}
 
 /* .portfolio-links li:last-child:hover::before {
   content: "more projects   ";
@@ -140,32 +137,30 @@ button {
   margin: 20px;
 }
 
-
-.about-trigger:hover + .about {
+.about-trigger:hover+.about {
   display: block;
 }
 
 .tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-
-    position: absolute;
-    z-index: 1;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
 }
 
 .tooltip:hover .tooltiptext {
-    visibility: visible;
+  visibility: visible;
 }
 
 .links-container {
@@ -194,18 +189,30 @@ button {
 }
 
 @keyframes slideinleft {
-  from { transform: translate(-120px); }
-  to   { transform: translate(0px); }
+  from {
+    transform: translate(-120px);
+  }
+  to {
+    transform: translate(0px);
+  }
 }
 
 @keyframes slideinright {
-  from { transform: translate(120px); }
-  to   { transform: translate(0px); }
+  from {
+    transform: translate(120px);
+  }
+  to {
+    transform: translate(0px);
+  }
 }
 
 @keyframes fadeout {
-  50% { opacity: 1; }
-  100% { opacity: 0; }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .controls-toggle {
@@ -250,31 +257,58 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(255, 255, 255, .2)
+  flex-direction: column;
+  /* background: rgb(255, 255, 255, .2) */
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate(0, -300px);
+  }
+  to {
+    transform: translate(0, 0px);
+  }
+}
+
+.modal-screen {
+}
+
+@keyframes slideUpCorner {
+  100% {
+    transform: translate(42vw, -42vh) scale(.2,.2);
+  }
 }
 
 .modal-screen.hidden {
-  display: none;
+  background: none;
+  animation: .1s slideUpCorner linear 1 forwards;
 }
 
 .modal-content {
-  width: 50vw;
+  min-width: 80vh;
+  max-width: 100vw;
   min-height: 50vh;
-  background: black;
-  border-radius: 50px;
+  background: #fcfbfb;
+  border-radius: 10px;
   text-align: center;
 }
 
 .modal-content header {
-  margin-top: 30px;
-  margin-right: 30px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 40%;
+  margin-left: 20px;
 }
 
 .modal-content header span {
   font-size: 30px;
   cursor: pointer;
+  margin-right: 20px;
+  margin-top: 20px;
+  font-weight: 100;
 }
 
 .modal-content header span:hover {
@@ -285,14 +319,130 @@ button {
   margin: 30px;
 }
 
-.modal-content h2, h3, span, p {
+/* .modal-content h2, h3, span, p {
   color: #fff;
-}
+} */
 
 .modal-content h3 {
   margin-bottom: 40px;
 }
 
+.modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-caption {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.keyboard {
+  background-image: url("assets/keyboard2.png");
+  position: relative;
+  width: 80%;
+  height: 26%;
+  background-size: cover;
+  background-repeat: none;
+}
+
+.key-overlay {
+  position: absolute;
+  top: 99px;
+  left: 80px;
+  width: 39px;
+  height: 39px;
+  border-radius: 4px;
+  background-color: rgb(252,204,10,.5);
+  z-index: 5;
+}
+
+.ctrl-key-overlay {
+  position: absolute;
+  top: 136px;
+  left: -25px;
+  width: 39px;
+  height: 39px;
+  border-radius: 4px;
+  background-color: rgb(252,204,10,.5);
+  z-index: 5;
+}
+
+.arrow {
+  color: grey;
+  padding: 10px;
+  margin: 10px;
+  font-size: 40px;
+  border-radius: 3px;
+}
+
+.arrow:hover {
+  background: black;
+  color: white;
+}
+
 button.about-trigger {
   font-size: 26px;
 }
+
+/* KEYBOARD */
+
+/* figure div.key-row {
+  display: flex;
+}
+
+figure.keyboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 751px;
+  height: 305px;
+  box-sizing: border-box; */
+  /* box-shadow: 0px 1px 0px rgb(140, 140, 140), 0px 2px 0px rgb(130, 130, 130), 0px 3px 0px rgb(125, 125, 125), 0px 4px 0px rgb(150, 150, 150), 0px 5px 0px rgb(100, 100, 100), 0px -10px 40px rgba(0, 0, 0, 0.4); */
+  /* border-radius: 7px;
+  background: rgb(239, 239, 239);
+}
+
+figure.keyboard .key {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  margin-bottom: 6px;
+  color: rgb(80, 80, 80);
+  box-shadow: 0px 1px 0px rgb(250, 250, 250), 0px 2px 0px rgb(250, 250, 250), 0px 3px 0px rgb(250, 250, 250), 0px 4px 0px 1px rgb(130, 130, 130), 0px 4px 0px 2px rgb(70, 70, 70);
+  background: rgb(249, 249, 249);
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+figure.keyboard .key p {
+  color: rgb(80, 80, 80);
+}
+
+figure.keyboard .key img {
+  width: 80%;
+  height: auto;
+  margin-bottom: 10px;
+} */
+
+/* SIZES */
+
+/* figure.keyboard .key-function {
+  padding-top: 4px;
+  width: 42px;
+  height: 20px;
+  font-size: 0.9em;
+}
+
+figure.keyboard .key-size-6 {
+  width: 58px;
+}
+
+figure.keyboard .key-size-7 {
+  width: 291px;
+} */
