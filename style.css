@@ -36,9 +36,9 @@ body {
 }
 
 .canvas-container {
-  /* top: 0px;
+  top: 0px;
   left: 0px;
-  position: absolute; */
+  position: absolute;
   height: 100vh;
   width: 100vw;
   /* z-index: -1; */
