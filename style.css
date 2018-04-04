@@ -88,6 +88,10 @@ button {
   flex-direction: column;
 }
 
+.left-nav {
+  width: 200px;
+}
+
 .left-nav, .right-nav {
   position: absolute;
   display: flex;
@@ -194,17 +198,41 @@ button {
   justify-content: space-between;
 }
 
+@keyframes controlsSlideInLeft {
+  0% {
+    transform: translate(-100%);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}
+
+@keyframes controlsSlideOutLeft {
+  0% {
+    transform: translate(100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+
 .controls {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   background-color: black;
-  border-radius: 10px;
+  border-radius: 0px 10px 10px 0px;
   margin-right: 10px;
+  animation: .3s controlsSlideInLeft linear 1 forwards;
+  animation-timing-function: ease-in-out;
 }
 
 .controls.hidden {
-  display: none;
+  animation: controlsSlideOutLeft ease-in-out .3s;
+  animation-timing-function: ease-in-out;
+  position: relative;
+  right: 100%;
 }
 
 .controls button {

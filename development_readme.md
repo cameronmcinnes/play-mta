@@ -3,6 +3,11 @@
 # TODO gaaahd
 https://stackoverflow.com/questions/45993483/how-to-use-multiple-click-event-on-a-canvas
 
+LIMIT PAN
+MOVE MUTE btn
+animations in directions ?
+fix css files 
+
 ### Background
 
 In 2011 Alexander Chen, creative director at Google Creative Lab, asked the question: what if we could make music from a subway map? Chen took a simplified version of the NYC subway map, animated the trains according to real train schedules and then added music. Each time a train crosses the path of another they pluck the straight portion of the path the train is on as if it were a cello string. See the live site.
