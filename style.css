@@ -1,5 +1,6 @@
 body {
   overflow: hidden;
+  margin: 0;
   /* font-family: 'Open Sans', sans-serif; */
   font-family: 'Arial', Helvetica, sans-serif;
 }
@@ -95,6 +96,7 @@ button {
 }
 
 .right-nav {
+  position: relative;
   align-items: flex-end;
   bottom: 0;
   right: 0;
@@ -105,6 +107,8 @@ button {
   text-align: right;
   flex-direction: column;
   justify-content: flex-end;
+  padding: none;
+  margin: none;
   /* width: 250px; */
 }
 
@@ -124,13 +128,22 @@ button {
   color: #4dadf7;
 }
 
-.portfolio-links li:last-child {}
+.portfolio-links li:last-child {
+  margin-bottom: 0;
+}
 
-/* .portfolio-links li:last-child:hover::before {
-  content: "more projects   ";
-  margin-left: 15px;
+.portfolio-links li:last-child::after {
+  content: "\Amore projects";
+  white-space:pre;
+  font-size: 13px;
+  color: rgb(0,0,0,0);
+}
+
+.portfolio-links li:last-child:hover::after {
+  content: "\Amore projects";
+  white-space:pre;
   color: #4dadf7;
-} */
+}
 
 .about {
   display: none;
@@ -252,50 +265,112 @@ button {
   z-index: 10;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 55vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  justify-content: flex-end;
+  /* align-items: center; */
   /* background: rgb(255, 255, 255, .2) */
 }
 
-@keyframes slideDown {
-  from {
-    transform: translate(0, -300px);
-  }
-  to {
-    transform: translate(0, 0px);
-  }
+.modal-always-shown {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .modal-screen {
-}
 
-@keyframes slideUpCorner {
-  100% {
-    transform: translate(42vw, -42vh) scale(.2,.2);
-  }
-}
-
-.modal-screen.hidden {
-  background: none;
-  animation: .1s slideUpCorner linear 1 forwards;
 }
 
 .modal-content {
-  min-width: 80vh;
-  max-width: 100vw;
-  min-height: 50vh;
+  display: flex;
+  animation: .3s slideInLeft linear 1 forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform linear .35s;
+}
+
+.arrow-tab {
+  background-color: black;
+  height: 40px;
+  width: 50px;
+  border-radius: 50px 0 0 50px;
+  cursor: pointer;
+}
+
+.arrow-tab:hover {
+  color: white;
+}
+
+@keyframes slideInLeft {
+  0% {
+    /* transform: translate(94.6%, 0); */
+    transform: translate(calc(100% - 252px), 0);
+    /* transform: translate(87%, 0); */
+
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes slideOutLeft {
+  100% {
+    /* transform: translate(94.6%, 0); */
+    transform: translate(calc(100% - 252px), 0);
+    /* transform: translate(87%, 0); */
+  }
+}
+
+.modal-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.modal-screen {
+  display: block;
+}
+
+
+.modal-screen.hidden {
+  display: none;
+}
+
+.modal-content.hidden .arrow {
+  transform: rotate(-180deg);
+}
+
+.modal-content.hidden {
+  animation: .3s slideOutLeft linear 1 forwards;
+  animation-timing-function: ease-in-out;
+}
+
+.modal-inner-box {
+  width: 45vw;
+  height: 100%;
   background: #fcfbfb;
-  border-radius: 10px;
+  background: #000;
   text-align: center;
+  display: flex;
+}
+.modal-section {
+  height: 100%;
+  width: 100%;
 }
 
 .modal-content header {
   display: flex;
   justify-content: space-between;
+  width: 100%
 }
 
 .logo {
@@ -329,8 +404,10 @@ button {
 
 .modal-body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .modal-caption {
@@ -345,6 +422,19 @@ button {
   height: 26%;
   background-size: cover;
   background-repeat: none;
+  border-radius: 10px;
+}
+
+@keyframes press {
+  0% {
+    transform: scale(0,0);
+  }
+  4% {
+    transform: scale(1.2,1.2);
+  }
+  5% {
+    transform: scale(1,1);
+  }
 }
 
 .key-overlay {
@@ -356,9 +446,10 @@ button {
   border-radius: 4px;
   background-color: rgb(252,204,10,.5);
   z-index: 5;
+  animation: press 2s infinite;
 }
 
-.ctrl-key-overlay {
+.ctrl-overlay {
   position: absolute;
   top: 136px;
   left: -25px;
@@ -372,14 +463,8 @@ button {
 .arrow {
   color: grey;
   padding: 10px;
-  margin: 10px;
-  font-size: 40px;
+  font-size: 22px;
   border-radius: 3px;
-}
-
-.arrow:hover {
-  background: black;
-  color: white;
 }
 
 button.about-trigger {
@@ -446,3 +531,12 @@ figure.keyboard .key-size-6 {
 figure.keyboard .key-size-7 {
   width: 291px;
 } */
+
+.bullet-list li {
+  margin: 0;
+}
+
+.bullet-list li img {
+  width: auto;
+  height: 3.8vh;
+}
