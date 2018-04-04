@@ -97,6 +97,7 @@ button {
 
 .right-nav {
   position: relative;
+  z-index: 10;
   align-items: flex-end;
   bottom: 0;
   right: 0;
@@ -109,38 +110,48 @@ button {
   justify-content: flex-end;
   padding: none;
   margin: none;
-  /* width: 250px; */
+}
+
+.portfolio-links li {
+  margin-top: 0;
 }
 
 .portfolio-links li:first-child {
-  height: 30px;
+  /* height: 30px; */
 }
 
-.portfolio-links li:first-child:hover::before {
-  content: 'github';
-  white-space: pre;
-  color: #4dadf7;
-}
-
-.portfolio-links li:nth-child(2):hover::before {
-  content: 'linkedin';
-  margin-left: 15px;
-  color: #4dadf7;
-}
-
-.portfolio-links li:last-child {
-  margin-bottom: 0;
-}
-
-.portfolio-links li:last-child::after {
-  content: "\Amore projects";
+.portfolio-links li::before {
+  content: "placeholder\A";
   white-space:pre;
   font-size: 13px;
   color: rgb(0,0,0,0);
 }
 
-.portfolio-links li:last-child:hover::after {
-  content: "\Amore projects";
+.portfolio-links li:first-child:hover::before {
+  content: 'github\A';
+  color: #4dadf7;
+}
+
+.portfolio-links li:nth-child(2):hover::before {
+  content: 'linkedin\A';
+  color: #4dadf7;
+}
+
+.portfolio-links li:last-child {
+  margin-bottom: 0;
+  width: 200px;
+}
+
+
+.portfolio-links li:last-child a {
+  /* width: auto; */
+  /* position: relative; */
+  /* right: 100%; */
+}
+
+
+.portfolio-links li:last-child:hover::before {
+  content: "more projects\A";
   white-space:pre;
   color: #4dadf7;
 }
@@ -278,6 +289,9 @@ button {
   justify-content: space-between;
   flex-direction: column;
   align-items: flex-end;
+  /* this forces the arrow button and portfolio-links out into the
+  canvas without reducing click/drag area between them */
+  width: 0px;
 }
 
 .modal-screen {
@@ -312,8 +326,9 @@ button {
 @keyframes slideInLeft {
   0% {
     /* transform: translate(94.6%, 0); */
-    transform: translate(calc(100% - 252px), 0);
+    /* transform: translate(calc(100% - 252px), 0); */
     /* transform: translate(87%, 0); */
+    transform: translate(100%);
 
   }
   100% {
@@ -324,8 +339,10 @@ button {
 @keyframes slideOutLeft {
   100% {
     /* transform: translate(94.6%, 0); */
-    transform: translate(calc(100% - 252px), 0);
+    /* transform: translate(calc(100% - 252px), 0); */
     /* transform: translate(87%, 0); */
+    transform: translate(100%);
+
   }
 }
 
