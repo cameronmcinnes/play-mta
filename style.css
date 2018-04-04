@@ -267,6 +267,11 @@ button {
   }
 }
 
+.top-lvl-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
 .controls-toggle {
   text-align: left;
 }
@@ -277,6 +282,10 @@ button {
 
 .controls-toggle:before {
   content: 'hide '
+}
+
+button.mute {
+  width: 43px;
 }
 
 .bullet-hidden {
@@ -413,13 +422,21 @@ button {
 }
 
 .modal-content header {
+  margin-top: 20px;
   display: flex;
-  justify-content: space-between;
-  width: 100%
+  justify-content: left;
+  width: 100%;
+  /* border-radius: 5px; */
+  /* background-color: #eee; */
+}
+
+.modal-content header p {
+  margin-left: 10px;
+  font-size: 40px;
 }
 
 .logo {
-  width: 40%;
+  height: 15%;
   margin-left: 20px;
 }
 
