@@ -335,6 +335,7 @@ button.mute {
   justify-content: space-between;
   flex-direction: column;
   align-items: flex-end;
+  height: 100vh;
   /* this forces the arrow button and portfolio-links out into the
   canvas without reducing click/drag area between them */
   width: 0px;
@@ -365,8 +366,8 @@ button.mute {
   cursor: pointer;
 }
 
-.arrow-tab:hover {
-  color: white;
+.arrow-tab:hover .arrow {
+  color: #4dadf7;
 }
 
 @keyframes slideInLeft {
@@ -396,7 +397,7 @@ button.mute {
   position: absolute;
   top: 0;
   right: 0;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .modal-screen {
@@ -418,34 +419,42 @@ button.mute {
 }
 
 .modal-inner-box {
-  width: 45vw;
-  height: 100%;
+  width: 630;
+  /* height: 100%; */
   background: #fcfbfb;
   background: #000;
   text-align: left;
   display: flex;
 }
 .modal-section {
+  display: flex;
+  overflow: scroll;
+  flex-basis: auto;
   height: 100%;
   width: 100%;
+  /* scroll fix */
+  white-space: nowrap;
+  flex-direction: column;
+  align-items: center;
 }
 
 .modal-content header {
   margin-top: 20px;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   width: 100%;
   /* border-radius: 5px; */
   /* background-color: #eee; */
 }
 
 .modal-content header p {
-  margin-left: 10px;
-  font-size: 40px;
+  margin-top: 0.61em;
+  margin-bottom: 0px;
+  font-size: 44px;
 }
 
 .logo {
-  height: 15%;
+  height: 100px;
   margin-left: 20px;
 }
 
@@ -462,21 +471,34 @@ button.mute {
 }
 
 .modal-content p {
-  margin: 30px;
+  /* margin: 30px; */
+}
+
+.modal-content figcaption {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.modal-content figcaption span {
+  display: block;
+  margin-top: 10px;
 }
 
 /* .modal-content h2, h3, span, p {
   color: #fff;
 } */
 
-.modal-content h3 {
-  margin-bottom: 40px;
+.modal-content h2 {
+  color: white;
+  font-size: 20px;
 }
 
 .modal-body {
   display: flex;
+  overflow-y: auto;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 100%;
 }
@@ -496,18 +518,7 @@ button.mute {
   border-radius: 10px;
 } */
 
-@keyframes press {
-  0% {
-    transform: scale(0,0);
-  }
-  4% {
-    transform: scale(1.2,1.2);
-  }
-  5% {
-    transform: scale(1,1);
-  }
-}
-
+/*
 .key-overlay {
   position: absolute;
   top: 99px;
@@ -518,17 +529,40 @@ button.mute {
   background-color: rgb(252,204,10,.5);
   z-index: 5;
   animation: press 2s infinite;
+} */
+
+@keyframes keypress {
+  0% { background-color: #888; }
+  40% { background-color: #888; }
+  50% { background-color: yellow; }
+  60% { background-color: yellow; }
+  70% { background-color: #888; }
+  100% { background-color: #888; }
 }
 
-.ctrl-overlay {
-  position: absolute;
-  top: 136px;
-  left: -25px;
-  width: 39px;
-  height: 39px;
-  border-radius: 4px;
-  background-color: rgb(252,204,10,.5);
-  z-index: 5;
+@keyframes keypressOther {
+  0% { background-color: #888; }
+  20% { background-color: #888; }
+  25% { background-color: yellow; }
+  30% { background-color: yellow; }
+  35% { background-color: #888; }
+  100% { background-color: #888; }
+}
+
+
+.key-overlay {
+  background-color: yellow;
+  width: 100%;
+  height: 100%;
+  animation: keypress 3s infinite;
+  display: flex;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+}
+
+.key-overlay.cntrl {
+  animation: keypressOther 6s infinite;
 }
 
 .arrow {
@@ -556,7 +590,7 @@ figure.keyboard {
   align-items: left;
   margin-left: 0;
   /* width: 751px; */
-  /* height: 305px; */
+  height: 240px;
   box-sizing: border-box;
   /* box-shadow: 0px 1px 0px rgb(140, 140, 140), 0px 2px 0px rgb(130, 130, 130), 0px 3px 0px rgb(125, 125, 125), 0px 4px 0px rgb(150, 150, 150), 0px 5px 0px rgb(100, 100, 100), 0px -10px 40px rgba(0, 0, 0, 0.4); */
   /* border-radius: 7px; */
@@ -572,14 +606,17 @@ figure.keyboard .key {
   margin: 5px;
   margin-bottom: 6px;
   color: rgb(80, 80, 80);
-  box-shadow: 0px 1px 0px rgb(250, 250, 250), 0px 2px 0px rgb(250, 250, 250), 0px 3px 0px rgb(250, 250, 250), 0px 4px 0px 1px rgb(130, 130, 130), 0px 4px 0px 2px rgb(70, 70, 70);
-  background: rgb(249, 249, 249);
+  /* box-shadow: 0px 1px 0px rgb(250, 250, 250), 0px 2px 0px rgb(250, 250, 250), 0px 3px 0px rgb(250, 250, 250), 0px 4px 0px 1px rgb(130, 130, 130), 0px 4px 0px 2px rgb(70, 70, 70); */
+  /* background: rgb(249, 249, 249); */
+  box-shadow: 0px 1px 0px rgb(250, 250, 250), 0px 2px 0px #666, 0px 3px 0px #666, 0px 4px 0px 1px #444, 0px 4px 0px 2px #333;
+  background: #888;
   border-radius: 3px;
   box-sizing: border-box;
 }
 
 figure.keyboard .key p {
   color: rgb(80, 80, 80);
+  cursor: default;
 }
 
 figure.keyboard .key img {
@@ -614,12 +651,176 @@ figure.keyboard .biggest {
   box-shadow: none;
 }
 
+figure.keyboard .key.cntrl {
+  width: 58px;
+}
+
 figure.keyboard .space-bar {
   width: 291px;
 }
 
+figure.keyboard .space-row {
+  margin-left: 130px;
+}
+
+@keyframes changeText {
+  0% { opacity: 0; }
+  20% {
+    content: "  UPTOWN";
+    opacity: 0;
+  }
+  25% { opacity: 1; }
+  30% { opacity: 1; }
+  35% { opacity: 0; }
+  70% {
+    content: "  DOWNTOWN";
+    opacity: 0;
+  }
+  75% { opacity: 1; }
+  80% { opacity: 1; }
+  85% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+figcaption.keyboard span.up-or-downtown {
+  width: 230px;
+  text-align: left;
+}
+
+figcaption.keyboard span.up-or-downtown::after {
+  content: "UPTOWN";
+  color: yellow;
+  background-color: black;
+  animation: changeText 6s linear infinite;
+}
+
+/* TRACKPAD */
+
+.scroll-demos {
+  display: flex;
+  border-radius: 5px;
+  padding: 30px 0;
+}
+
+.click-demos {
+  display: flex;
+  border-radius: 5px;
+  padding: 30px 0;
+}
+
+
+@keyframes scroll {
+  0% { transform: translate(0,0); }
+  20% { transform: translate(0,0); }
+  45% { transform: translate(0, -50px);}
+  55% { transform: translate(0, -50px);}
+  80% { transform: translate(0,0); }
+  100% { transform: translate(0,0); }
+}
+
+figure.trackpad {
+  width: 170px;
+  height: 110px;
+  background-color: #666;
+  border-radius: 5px;
+  box-shadow: 0px 5px 0px #666, 0px 3px 0px #666, 0px 4px 0px 1px #444, 0px 4px 0px 2px #333;
+}
+
+figure.trackpad .fingers  {
+  position: relative;
+}
+
+figure.trackpad .fingers .left, .right {
+  /* width: 20px;
+  height: 20px;
+  border-radius: 100%; */
+  position: absolute;
+}
+
+
+figure.trackpad .fingers .left img, .right img{
+  width: 40px;
+}
+
+.scroll-demos figure.trackpad .fingers .left {
+  left: 62px;
+  top: 72px;
+  animation: scroll 3s ease-in-out infinite;
+}
+
+.scroll-demos figure.trackpad .fingers .right {
+  left: 82px;
+  top: 54px;
+  animation: scroll 3s ease-in-out infinite;
+}
+
+/* MOUSE */
+
+figure.mouse {
+  position: relative;
+}
+
+figure.mouse .top {
+  height: 50px;
+  width: 50px;
+  border: solid 4px #888;
+  border-radius: 100% 100% 0 0;
+  border-bottom: none;
+}
+
+figure.mouse .bottom {
+  height: 50px;
+  width: 50px;
+  border: solid 4px #888;
+  border-radius: 0 0 100% 100%;
+  border-top: none;
+}
+
+.scroll-demos figure.mouse .scroll-wheel {
+  background-color: yellow;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  animation: scroll 3s ease-in-out infinite;
+  left: 23px;
+  top: 60px;
+}
+
+@keyframes click {
+  0% { transform: scale(1,1); }
+  5% { transform: scale(.8,.8); }
+  15% { transform: scale(1.2,1.2); }
+  30% { transform: scale(1,1); }
+}
+
+.click-demos figure.trackpad img {
+  width: 40px;
+  margin-left: 70px;
+  margin-top: 40px;
+  animation: click 2s ease-in-out infinite;
+}
+
+.click-demos figure.mouse .click {
+  background-color: yellow;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 14px;
+  top: 18px;
+  animation: click 2s ease-in-out infinite;
+}
+
+/*
+figure .click-demo {
+  height: 100px;
+  width: auto;
+} */
+
 .bullet-list li {
   margin: 0;
+  cursor: default;
 }
 
 .bullet-list li img {

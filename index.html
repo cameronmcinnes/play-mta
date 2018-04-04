@@ -41,11 +41,6 @@
       <button class='re-center'>
         center map
       </button>
-<!--
-      <button class='about-trigger'>
-        ?
-      </button> -->
-
     </nav>
 
     <img
@@ -57,13 +52,10 @@
     <canvas id="canvas"></canvas>
   </div>
 
+  <!-- BUG if i delete this canvas dissapears-->
   <div class="background-img-container">
-    <!-- <img class="background-image" src='./background_map/bg_map.svg'/> -->
   </div>
 
-  <!-- <div class="modal-screen">
-
-  </div> -->
   <div class="modal-content">
     <div class="modal-inner-box">
       <div class="modal-always-shown">
@@ -98,65 +90,124 @@
 
       </div>
       <div class="modal-body">
-      <header>
-        <img class='logo' src="assets/play_mta_updated_logo.svg" alt="logo"><p>MTA</p>
-      </header>
-      <div class="modal-section">
-        <p>Welcome aboard :)</p>
-        <p>press keys to dispatch trains</p>
-        <figure class='keyboard'>
+        <header>
+          <img class='logo' src="assets/play_mta_updated_logo.svg" alt="logo"><p>MTA</p>
+        </header>
+        <h2>Play the subway like an instrument</h2>
+        <div class="modal-section">
 
-        <div class="key-row ltr-1">
-          <div class="key big"></div>
-          <div class="key"><p>Q</p></div>
-          <div class="key"><p>W</p></div>
-          <div class="key"><p>E</p></div>
-          <div class="key"><p>R</p></div>
-          <div class="key"><p>T</p></div>
-          <div class="key"><p>Y</p></div>
 
-          <!-- <div class="key"><img src="assets/subway_bullets/Q.svg" alt="bullet-Q"></div>
-          <div class="key"><img src="assets/subway_bullets/W.svg" alt="bullet-W"></div>
-          <div class="key"><img src="assets/subway_bullets/E.svg" alt="bullet-E"></div>
-          <div class="key"><img src="assets/subway_bullets/R.svg" alt="bullet-R"></div>
-          <div class="key"><p>T</p> </div>
-          <div class="key"><p>Y</p> </div> -->
-        </div>
-        <div class="key-row ltr-2">
-          <div class="key bigger"></div>
-          <div class="key"><p>A</p></div>
-          <div class="key"><p>S</p></div>
-          <div class="key"><p>D</p></div>
-          <div class="key"><p>F</p></div>
-          <div class="key"><p>G</p></div>
+          <figure class='keyboard'>
+            <div class="key-row ltr-1">
+              <div class="key big"></div>
+              <div class="key">
+                <div class="key-overlay">
+                  <p>Q</p>
+                </div>
+              </div>
+              <div class="key"><p>W</p></div>
+              <div class="key"><p>E</p></div>
+              <div class="key"><p>R</p></div>
+              <div class="key"><p>T</p></div>
+              <div class="key"><p>Y</p></div>
+              <div class="key"><p>U</p> </div>
+              <div class="key"><p>I</p> </div>
+              <div class="key"><p>O</p> </div>
+              <div class="key"><p>P</p> </div>
 
-          <!-- <div class="key"><img src="assets/subway_bullets/A.svg" alt="bullet-A"></div>
-          <div class="key"><img src="assets/subway_bullets/S.svg" alt="bullet-S"></div>
-          <div class="key"><img src="assets/subway_bullets/D.svg" alt="bullet-D"></div>
-          <div class="key"><img src="assets/subway_bullets/F.svg" alt="bullet-F"></div>
-          <div class="key"><img src="assets/subway_bullets/G.svg" alt="bullet-G"></div>
-         -->
+              <!-- <div class="key"><img src="assets/subway_bullets/Q.svg" alt="bullet-Q"></div>
+              <div class="key"><img src="assets/subway_bullets/W.svg" alt="bullet-W"></div>
+              <div class="key"><img src="assets/subway_bullets/E.svg" alt="bullet-E"></div>
+              <div class="key"><img src="assets/subway_bullets/R.svg" alt="bullet-R"></div>
+              <div class="key"><p>T</p> </div>
+              <div class="key"><p>Y</p> </div> -->
+            </div>
+            <div class="key-row ltr-2">
+              <div class="key bigger"></div>
+              <div class="key"><p>A</p></div>
+              <div class="key"><p>S</p></div>
+              <div class="key"><p>D</p></div>
+              <div class="key"><p>F</p></div>
+              <div class="key"><p>G</p></div>
+              <div class="key"><p>H</p> </div>
+              <div class="key"><p>J</p></div>
+              <div class="key"><p>K</p></div>
+              <div class="key"><p>L</p></div>
+
+            </div>
+            <div class="key-row ltr-3">
+              <div class="key biggest"></div>
+              <div class="key"><p>Z</p></div>
+              <div class="key"><p>X</p></div>
+              <div class="key"><p>C</p></div>
+              <div class="key"><p>V</p></div>
+              <div class="key"><p>B</p></div>
+              <div class="key"><p>N</p></div>
+              <div class="key"><p>M</p></div>
+              <div class="key"><p></p></div>
+
+            </div>
+            <div class='key-row space-row'>
+            <div class="key cntrl">
+              <div class="key-overlay cntrl">
+                <p>cntrl</p>
+              </div>
+            </div>
+            <div class="key space-bar">
+
+            </div>
+          </div>
+          </figure>
+          <figcaption class='keyboard'>
+            <span class='up-or-downtown'>dispatch trains:</span>
+          </figcaption>
+
+          <div class='scroll-demos'>
+            <figure class='trackpad'>
+              <div class="fingers">
+                <div class="left"><img src="assets/fingerprint.png" alt="print"></div>
+                <div class="right"><img src="assets/fingerprint.png" alt="print"></div>
+              </div>
+            </figure>
+
+            <figure class='mouse'>
+              <div class="top">
+                <div class="scroll-wheel"></div>
+              </div>
+              <div class="bottom"></div>
+            </figure>
+          </div>
+          <figcaption>scroll to zoom, click and drag to pan</figcaption>
+
+          <div class='click-demos'>
+            <figure class='trackpad'>
+              <div class="fingers">
+                <img src="assets/fingerprint.png" alt="print">
+              </div>
+            </figure>
+
+            <figure class='mouse'>
+              <div class="top">
+                <div class="click"></div>
+              </div>
+              <div class="bottom"></div>
+            </figure>
+          </div>
+
+          <figcaption>click train lines to select them and isolate their sound</figcaption>
+
+
+        <!-- <figure>
+          <img class='click-demo' src="https://media.giphy.com/media/PPl2AvkPZyRgDaJ2Nu/giphy.gif" alt="">
+        </figure>
+        <figcaption>
+          <span>click a moving train line to isolate that line's sound</span>
+          <span>click again to deselect</span>
+          <span>try clicking a few different lines</span>
+          </figcaption> -->
+
+          <p>press space to toggle this menu</p>
         </div>
-        <div class="key-row ltr-3">
-          <div class="key biggest"></div>
-          <div class="key"><p>Z</p></div>
-          <div class="key"><p>X</p> </div>
-          <div class="key"><p>C</p></div>
-          <div class="key"><p>V</p> </div>
-<!--
-          <div class="key"><img src="assets/subway_bullets/Z.svg" alt="bullet-Z"></div>
-          <div class="key"><p>X</p> </div>
-          <div class="key"><img src="assets/subway_bullets/C.svg" alt="bullet-C"></div>
-          <div class="key"><p>V</p> </div> -->
-        </div>
-      </figure>
-        <p>hold ctrl while pressing keys to dispatch trains uptown</p>
-        <p>scroll to zoom</p>
-        <p>click and drag to pan</p>
-        <p>click on a moving train line to isolate that lines sound</p>
-        <p>try clicking a few lines at once!</p>
-        <p>close and open this window by hitting the space bar</p>
-      </div>
       </div>
       <ul class='bullet-list'>
         <li><img src="assets/subway_bullets/1.svg" alt="bullet-1"></li>
