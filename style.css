@@ -112,37 +112,46 @@ button {
   text-align: right;
   flex-direction: column;
   justify-content: flex-end;
-  padding: none;
-  margin: none;
+  padding: 0;
+  margin: 0;
 }
 
 .portfolio-links li {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .portfolio-links li:first-child {
-  /* height: 30px; */
+  margin-bottom: 10px;
 }
 
-.portfolio-links li::before {
-  content: "placeholder\A";
+.portfolio-links li::after {
+  content: "\Aplaceholder";
   white-space:pre;
   font-size: 13px;
   color: rgb(0,0,0,0);
 }
 
-.portfolio-links li:first-child:hover::before {
-  content: 'github\A';
+/* .portfolio-links li:last-child::before {
+  content: "placeholder\A";
+  white-space:pre;
+  font-size: 13px;
+  color: rgb(0,0,0,0);
+} */
+
+.portfolio-links li:first-child:hover::after {
+  content: '\Agithub';
   color: #4dadf7;
 }
 
-.portfolio-links li:nth-child(2):hover::before {
-  content: 'linkedin\A';
+.portfolio-links li:nth-child(2):hover::after {
+  content: '\Alinkedin';
   color: #4dadf7;
 }
 
 .portfolio-links li:last-child {
   margin-bottom: 0;
+  margin-top: 0;
   width: 200px;
 }
 
@@ -154,8 +163,8 @@ button {
 }
 
 
-.portfolio-links li:last-child:hover::before {
-  content: "more projects\A";
+.portfolio-links li:last-child:hover::after {
+  content: "\Amore projects";
   white-space:pre;
   color: #4dadf7;
 }
@@ -413,7 +422,7 @@ button.mute {
   height: 100%;
   background: #fcfbfb;
   background: #000;
-  text-align: center;
+  text-align: left;
   display: flex;
 }
 .modal-section {
@@ -477,7 +486,7 @@ button.mute {
   color: #fff;
 }
 
-.keyboard {
+/* .keyboard {
   background-image: url("assets/keyboard2.png");
   position: relative;
   width: 80%;
@@ -485,7 +494,7 @@ button.mute {
   background-size: cover;
   background-repeat: none;
   border-radius: 10px;
-}
+} */
 
 @keyframes press {
   0% {
@@ -535,21 +544,23 @@ button.about-trigger {
 
 /* KEYBOARD */
 
-/* figure div.key-row {
+figure div.key-row {
   display: flex;
+  margin-left: 20px;
 }
 
 figure.keyboard {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 751px;
-  height: 305px;
-  box-sizing: border-box; */
+  align-items: left;
+  margin-left: 0;
+  /* width: 751px; */
+  /* height: 305px; */
+  box-sizing: border-box;
   /* box-shadow: 0px 1px 0px rgb(140, 140, 140), 0px 2px 0px rgb(130, 130, 130), 0px 3px 0px rgb(125, 125, 125), 0px 4px 0px rgb(150, 150, 150), 0px 5px 0px rgb(100, 100, 100), 0px -10px 40px rgba(0, 0, 0, 0.4); */
-  /* border-radius: 7px;
-  background: rgb(239, 239, 239);
+  /* border-radius: 7px; */
+  /* background: rgb(239, 239, 239); */
 }
 
 figure.keyboard .key {
@@ -574,25 +585,38 @@ figure.keyboard .key p {
 figure.keyboard .key img {
   width: 80%;
   height: auto;
-  margin-bottom: 10px;
-} */
+}
 
 /* SIZES */
 
-/* figure.keyboard .key-function {
+figure.keyboard .key-function {
   padding-top: 4px;
   width: 42px;
   height: 20px;
   font-size: 0.9em;
 }
 
-figure.keyboard .key-size-6 {
+figure.keyboard .big {
   width: 58px;
+  background-color: rgb(0,0,0,0);
+  box-shadow: none;
 }
 
-figure.keyboard .key-size-7 {
+figure.keyboard .bigger {
+  width: 74px;
+  background-color: rgb(0,0,0,0);
+  box-shadow: none;
+}
+
+figure.keyboard .biggest {
+  width: 96px;
+  background-color: rgb(0,0,0,0);
+  box-shadow: none;
+}
+
+figure.keyboard .space-bar {
   width: 291px;
-} */
+}
 
 .bullet-list li {
   margin: 0;
