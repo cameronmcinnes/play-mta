@@ -508,29 +508,6 @@ button.mute {
   color: #fff;
 }
 
-/* .keyboard {
-  background-image: url("assets/keyboard2.png");
-  position: relative;
-  width: 80%;
-  height: 26%;
-  background-size: cover;
-  background-repeat: none;
-  border-radius: 10px;
-} */
-
-/*
-.key-overlay {
-  position: absolute;
-  top: 99px;
-  left: 80px;
-  width: 39px;
-  height: 39px;
-  border-radius: 4px;
-  background-color: rgb(252,204,10,.5);
-  z-index: 5;
-  animation: press 2s infinite;
-} */
-
 @keyframes keypress {
   0% { background-color: #888; }
   40% { background-color: #888; }
@@ -589,7 +566,6 @@ figure.keyboard {
   justify-content: center;
   align-items: left;
   margin-left: 0;
-  /* width: 751px; */
   height: 240px;
   box-sizing: border-box;
   /* box-shadow: 0px 1px 0px rgb(140, 140, 140), 0px 2px 0px rgb(130, 130, 130), 0px 3px 0px rgb(125, 125, 125), 0px 4px 0px rgb(150, 150, 150), 0px 5px 0px rgb(100, 100, 100), 0px -10px 40px rgba(0, 0, 0, 0.4); */
@@ -608,7 +584,7 @@ figure.keyboard .key {
   color: rgb(80, 80, 80);
   /* box-shadow: 0px 1px 0px rgb(250, 250, 250), 0px 2px 0px rgb(250, 250, 250), 0px 3px 0px rgb(250, 250, 250), 0px 4px 0px 1px rgb(130, 130, 130), 0px 4px 0px 2px rgb(70, 70, 70); */
   /* background: rgb(249, 249, 249); */
-  box-shadow: 0px 1px 0px rgb(250, 250, 250), 0px 2px 0px #666, 0px 3px 0px #666, 0px 4px 0px 1px #444, 0px 4px 0px 2px #333;
+  /* box-shadow: 0px 1px 0px rgb(250, 250, 250), 0px 2px 0px #666, 0px 3px 0px #666, 0px 4px 0px 1px #444, 0px 4px 0px 2px #333; */
   background: #888;
   border-radius: 3px;
   box-sizing: border-box;
