@@ -1,5 +1,5 @@
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
   margin: 0;
   /* font-family: 'Open Sans', sans-serif; */
   font-family: 'Arial', Helvetica, sans-serif;
@@ -317,19 +317,6 @@ button.mute {
   animation: .3s slideinright, 1s fadeout linear 1 forwards;
 }
 
-.modal-screen {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  width: 55vw;
-  height: 100vh;
-  display: flex;
-  justify-content: flex-end;
-  /* align-items: center; */
-  /* background: rgb(255, 255, 255, .2) */
-}
-
 .modal-always-shown {
   display: flex;
   justify-content: space-between;
@@ -339,16 +326,6 @@ button.mute {
   /* this forces the arrow button and portfolio-links out into the
   canvas without reducing click/drag area between them */
   width: 0px;
-}
-
-.modal-screen {
-
-}
-
-.modal-content {
-  display: flex;
-  animation: .3s slideInLeft linear 1 forwards;
-  animation-timing-function: ease-in-out;
 }
 
 .arrow {
@@ -397,16 +374,10 @@ button.mute {
   position: absolute;
   top: 0;
   right: 0;
-  /* height: 100%; */
-}
-
-.modal-screen {
-  display: block;
-}
-
-
-.modal-screen.hidden {
-  display: none;
+  height: 100%;
+  display: flex;
+  animation: .3s slideInLeft linear 1 forwards;
+  animation-timing-function: ease-in-out;
 }
 
 .modal-content.hidden .arrow {
@@ -428,9 +399,9 @@ button.mute {
 }
 .modal-section {
   display: flex;
-  overflow: scroll;
+  /* overflow: scroll; */
   flex-basis: auto;
-  height: 100%;
+  min-height: 1000px;
   width: 100%;
   /* scroll fix */
   white-space: nowrap;
@@ -443,6 +414,8 @@ button.mute {
   display: flex;
   justify-content: center;
   width: 100%;
+  /* NEW HEIGHT */
+  min-height: 100px;
   /* border-radius: 5px; */
   /* background-color: #eee; */
 }
@@ -801,5 +774,5 @@ figure .click-demo {
 
 .bullet-list li img {
   width: auto;
-  height: 3.8vh;
+  height: 3.5vh;
 }
