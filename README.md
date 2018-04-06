@@ -2,6 +2,8 @@
 
 
 ## Background
+[See the project live](https://cameronmcinnes.github.io/play-mta/)
+
 
 In 2011 Alexander Chen, creative director at Google Creative Lab, asked the question: what if we could make music out of a subway map? Chen took a simplified version of the NYC subway map and animated the trains according to real train schedules. Each time a train crosses the path of another it plucks the other train line as if it were a cello string. See the live site.
 http://www.mta.me/
