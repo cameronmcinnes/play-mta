@@ -129,14 +129,14 @@ button {
   content: "\Aplaceholder";
   white-space:pre;
   font-size: 13px;
-  color: rgb(0,0,0,0);
+  color: rgba(0,0,0,0);
 }
 
 /* .portfolio-links li:last-child::before {
   content: "placeholder\A";
   white-space:pre;
   font-size: 13px;
-  color: rgb(0,0,0,0);
+  color: rgba(0,0,0,0);
 } */
 
 .portfolio-links li:first-child:hover::after {
@@ -584,19 +584,19 @@ figure.keyboard .key-function {
 
 figure.keyboard .big {
   width: 58px;
-  background-color: rgb(0,0,0,0);
+  background-color: rgba(0,0,0,0);
   box-shadow: none;
 }
 
 figure.keyboard .bigger {
   width: 74px;
-  background-color: rgb(0,0,0,0);
+  background-color: rgba(0,0,0,0);
   box-shadow: none;
 }
 
 figure.keyboard .biggest {
   width: 96px;
-  background-color: rgb(0,0,0,0);
+  background-color: rgba(0,0,0,0);
   box-shadow: none;
 }
 
