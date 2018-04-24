@@ -100,11 +100,11 @@ button {
 }
 
 .right-nav {
+  left: -30px;
   position: relative;
   z-index: 10;
   align-items: flex-end;
-  bottom: 0;
-  right: 0;
+  /* top: calc(100vh - 40px); */
 }
 
 .portfolio-links {
@@ -761,18 +761,29 @@ figure.mouse .bottom {
   animation: click 2s ease-in-out infinite;
 }
 
-/*
-figure .click-demo {
-  height: 100px;
-  width: auto;
-} */
+.bullet-list {
+  position: absolute;
+  height: calc(100vh - 50px);
+  margin-top: 45px;
+  padding-left: 0px;
+}
 
 .bullet-list li {
   margin: 0;
   cursor: default;
+  height: calc(100%/23)
 }
 
 .bullet-list li img {
   width: auto;
-  height: 3.5vh;
+  height: 100%;
+  cursor: pointer;
+  background-color: none;
+  border-radius: 50%;
+  transition: background-color 0.1s linear;
+}
+
+.bullet-list li img:active {
+  background-color: white;
+  border-radius: 100%;
 }
